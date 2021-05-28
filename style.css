@@ -1,12 +1,16 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Bodoni Moda', serif;
     text-transform: lowercase;
+    
 }
 
 nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -15,13 +19,10 @@ nav {
 }
 
 .logo {
-    letter-spacing: 2px;
-    font-size: 15px;
     color: black;
-}
-
-.logo:hover {
-    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
 }
 
 .nav-links {
@@ -36,33 +37,27 @@ nav {
 }
 
 .nav-links a {
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-size: 14px;
-    font-weight: lighter;
     color: black;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .burger {
     display: none;
-    cursor: pointer;
-    z-index: 999;
 }
 
 .burger div {
     width: 25px;
     height: 2px;
-    margin: 5px;
     background-color: black;
+    margin: 5px;
     transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 1024px) {
-  .nav-links {
+    .nav-links {
         width: 60%;
     }
 }
@@ -71,8 +66,9 @@ nav {
     body {
         overflow-x: hidden;
     }
+    
     .nav-links {
-        position: absolute;
+        position: fixed;
         right: 0px;
         height: 92vh;
         top: 8vh;
@@ -84,17 +80,23 @@ nav {
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
+    
     .nav-links li {
         opacity: 0;
     }
+    
     .burger {
         display: block;
         cursor: pointer;
     }
+    
+    .logo {
+    	padding-left: 5px;
+    }
 }
 
 .nav-active {
-    transform: translateX(0%);
+        transform: translateX(0%);
 }
 
 @keyframes navLinkFade {
@@ -104,30 +106,32 @@ nav {
     }
     to {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateX(0);
     }
 }
 
 .toggle .line1 {
     transform: rotate(-45deg) translate(-4px, 6px);
 }
+
 .toggle .line2 {
     opacity: 0;
 }
+
 .toggle .line3 {
     transform: rotate(45deg) translate(-4px, -6px);
 }
 
-/* CALCULATOR */
-.calculator {
-    margin: 10px;
-    padding-top: 30px;
+
+.bio {
+    margin: 15px;
     text-align: center;
 }
 
-.bio {
-    margin: 20px;
-    text-align: center;
+.gallery {
+    margin: auto;
+    width: 105%;
+    padding-left: 3%;
 }
 
 @media screen and (max-width:5200px) {
@@ -139,18 +143,12 @@ nav {
 
 @media screen and (max-width:800px) {
     .item .title {
-        font-size: 9px;
+        font-size: 8px;
     }
     .item .price {
         font-size: 20px;
         padding-top: 0px;
     }
-}
-
-.gallery {
-    margin: auto;
-    width: 105%;
-    padding-left: 3%;
 }
 
 .item {
@@ -160,6 +158,7 @@ nav {
     margin: auto;
     display: inline-block;
     position: relative;
+    text-align: center;
     
     background-color: white;
     background-color: transparent white;
@@ -193,9 +192,8 @@ nav {
     cursor: default;
 }
 
-.title {
-    padding: 15px;
-    text-align: center;
+img {
+    border-radius: 50%;
 }
 
 body, html {
@@ -203,14 +201,14 @@ body, html {
     margin: 0%;
 }
 
-img {
-    border-radius: 50%;
-}
-
 .bg {
     background-image: url("images/korzinki.jpg");
-    height: 80%;
+    height: 70%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.logo:hover {
+    cursor: pointer;
 }
