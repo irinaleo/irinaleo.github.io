@@ -15,7 +15,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color: #FFE3CB;
+    background-color: #F0DBD8;
 }
 
 .logo {
@@ -72,7 +72,7 @@ nav {
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: #FFE3CB;
+        background-color: #F0DBD8;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -126,6 +126,11 @@ nav {
 .bio {
     margin: 15px;
     text-align: center;
+}
+
+.footer {
+    text-align: center;
+    background-color: #F0DBD8;
 }
 
 .gallery {
@@ -202,7 +207,7 @@ body, html {
 }
 
 .bg {
-    background-image: url("images/korzinki.jpg");
+    background-image: url("images/pav.jpg");
     height: 70%;
     background-position: center;
     background-repeat: no-repeat;
@@ -211,4 +216,19 @@ body, html {
 
 .logo:hover {
     cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid white;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #F0DBD8;
 }
