@@ -1,54 +1,132 @@
-<!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="ie-edge">
-        <meta name="viewport" content="width=device-width" />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
+	    <link rel="stylesheet" href="style.css">
+	    <title>Tanya Specialty Sweets</title>
+	</head>
 
-        <link rel="stylesheet" href="style.css">
-        <title>Tanya Specialty Sweets</title>
-    </head>
+	<nav>
+	    <div class="logo"><h5>Tanya Specialty Sweets</h5></div>
+	    <ul class="nav-links">
+	        <li><a href="index.html">Home</a></li>
+	        <li><a href="pastries.html">Pastries</a></li>
+	        <li><a href="cakes.html">Cakes</a></li>
+	    </ul>
+	    <div class="burger">
+	        <div class="line1"></div>
+	        <div class="line2"></div>
+	        <div class="line3"></div>
+	    </div>
+	</nav>
+	
+	<body>
+	<br><br><br><br>
+	    <div class="bio">
+	        <form id="order">
+	            <table id="selections">
+                    <tr>
+                        <td><label>Walnuts</label>
+                            <input type="text" name="walnutqty" placeholder="1.00" size="6">
+                        </td>
+                        <td><input type="text" name="hornqty" placeholder="1.00" size="6">
+                            <label>Cream Horns</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Glazed Cookies</label>
+                        <input type="text" name="gcookieqty" placeholder="1.00" size="6">
+                        </td>
+                        
+                        <td><input type="text" name="hcookieqty" placeholder="1.00" size="6">
+                        <label>Honey Cookies</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Acorns</label>
+                            <input type="text" name="acornqty" placeholder="1.25" size="6">
+                        </td>
+                        <td><input type="text" name="chocpruneqty" placeholder="1.25" size="6">
+                            <label>Chocolate Prunes</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Macarons</label>
+                            <input type="text" name="macaronqty" placeholder="1.50" size="6">
+                        </td>
+                        <td><input type="text" name="crunchypuffqty" placeholder="1.50" size="6">
+                            <label>Crunchy puffs</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Peaches</label>
+                            <input type="text" name="peachqty" placeholder="1.50" size="6">
+                        </td>
+                        <td><input type="text" name="lemonqty" placeholder="1.50" size="6">
+                            <label>Lemons</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Chestnuts</label>
+                            <input type="text" name="chestnutqty" placeholder="1.50" size="6">
+                        </td>
+                        <td><input type="text" name="towerqty" placeholder="1.50" size="6">
+                            <label>Cake Towers</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Fruit Pavlovas</label>
+                            <input type="text" name="pavlovaqty" placeholder="1.50" size="6">
+                        </td>
+                        <td><input type="text" name="cakepopqty" placeholder="1.50" size="6">
+                            <label>Chocolate Cake Pops</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Mini Cupcakes</label>
+                            <input type="text" name="minicupcakeqty" placeholder="1.50" size="6">
+                        </td>
+                        <td><input type="text" name="cheesecakeqty" placeholder="2.00" size="6">
+                            <label>Cheesecakes</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Prune Cups</label>
+                            <input type="text" name="prunecupqty" placeholder="2.00" size="6">
+                        </td>
+                        <td><input type="text" name="cupcakeqty" placeholder="2.00" size="6">
+                            <label>Cupcakes</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Tiramisu Cups</label>
+                            <input type="text" name="tiramisucupqty" placeholder="2.00" size="6">
+                        </td>
+                        <td><input type="text" name="tartqty" placeholder="4.99" size="6">
+                            <label>Chocolate Tarts</label>
+                        </td>
+                    </tr>
+	            </table>
+	        </form>
+          <br>
+	        <div style="text-align:center" id="totalPrice"></div>
+          <br>
+          <button type="button" style="display:none;" id="reset" onclick="reset()">Reset</button>
+	        <br><br><br><br>
+	    </div>
+	    
+	    <div class="footer">
+			<br>
+			<i>Custom web page by Irina ~ Launched in 2021</i>
+			<br><br>
+		</div>
 
-    <body>
-        <nav>
-            <div class="logo">
-                <h2>Tanya Specialty Sweets • Calculator</h2>
-            </div>
-            <ul class="nav-links">
-                <li>
-                    <a href="index.html">home</a>
-                </li>
-                <li>
-                    <a href="pastries.html">pastries</a>
-                </li>
-                <li>
-                    <a href="cakes.html">cakes</a>
-                </li>
-                <li>
-                    <a href="calculator.html">calculator</a>
-                </li>
-                <li>
-                    <a href="gallery.html">gallery</a>
-                </li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-
-        <div class="calculator">
-            <h4>Estimate your order cost</h4>
-            <select class="select">
-            </select>
-        </div>
-            
-
-        <script src="app.js"></script>
-
-    </body>
+	</body>
+	<script src="app.js"></script>
+	<script src="order.js"></script>
+	
+	
 </html>
