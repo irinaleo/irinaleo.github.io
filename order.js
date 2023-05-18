@@ -71,7 +71,7 @@ function calculateTotal() {
     updateTotal(priceField, total);
 }
 
-const items = ['walnut', 'horn', 'gcookie', 'hcookie', 'acorn', 'chocprune', 'macaron', 'crunchypuff', 'peach', 'lemon', 'chestnut', 'tower', 'pavlova', 'cakepop', 'minicupcake', 'cheesecake', 'prunecup', 'cupcake', 'tiramisucup', 'tart'];
+const items = ['walnut', 'horn', 'gcookie', 'hcookie', 'acorn', 'chocprune', 'macaron', 'crunchypuff', 'peach', 'lemon', 'chestnut', 'tower', 'pavlova', 'cakepop', 'minicupcake', 'cheesecake', 'prunecup', 'cupcake', 'tiramisucup', 'tart', 'sccake', 'lccake', 'sscake', 'lscake', 'sdcake'];
 const form = document.getElementById('order');
 form.priceField = document.getElementById('totalPrice');
 form.addEventListener('change', calculateTotal);
