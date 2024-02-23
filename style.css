@@ -232,11 +232,3 @@ td, th {
 tr:nth-child(even) {
   background-color: #F0DBD8;
 }
-
-.selections, table td:nth-child(1) {
-    text-align: end;
-}
-
-.selections, table td:nth-child(2) {
-    text-align: left;
-}
